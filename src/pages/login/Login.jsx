@@ -68,10 +68,10 @@ const Login = () => {
     if (getUserData?.flag === false) {
       toast.error(`${getUserData.message}`, tostConf);
     } else {
-      // console.log(" login data  " + getUserData?.flag);
       localStorage.setItem("users", JSON.stringify(getUserData));
       setUserData(getUserData);
     }
+    console.log("Login Page alvish opererator section : ", getUserData?.nuli);
 
     setLoading(false);
   };

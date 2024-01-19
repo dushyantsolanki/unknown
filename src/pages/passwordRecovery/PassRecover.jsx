@@ -18,7 +18,7 @@ const ForgotPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     setIsLoding(true);
     const linkFlag = await auth.passwordRecoverySend({ email });
 
@@ -99,7 +99,9 @@ const ForgotPassword = () => {
               }}
               variant="body2"
             >
-              Back to Login
+              <Typography component="h1" variant="h6">
+                Back to Login
+              </Typography>
             </Link>
           </Grid>
         </Grid>

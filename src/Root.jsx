@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Signup,
   Login,
@@ -15,15 +15,14 @@ import {
 import AuthLayout from "./layout/authLayout/AuthLayout";
 import DashboardLayout from "./layout/dashboardLayout/DashboardLayout";
 import { useDataContext } from "./context/useDataContext/useDataContext";
-import { useGetAccountContext } from "./context/useGetAccount/useGetAccount";
 import NewPassword from "./pages/passwordRecovery/NewPassword";
 
 function Root() {
-  const { userData } = useDataContext();
-  const { isAccount } = useGetAccountContext();
+  const { userData, isAccount } = useDataContext();
+
   console.log(userData, isAccount);
 
-  // here i ddefine the path all pages
+  // here i define the path all pages
   const router = createBrowserRouter([
     {
       path: "/",

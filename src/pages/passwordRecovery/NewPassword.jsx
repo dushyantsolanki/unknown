@@ -48,6 +48,7 @@ const PasswordForm = () => {
       toast.error(`${getData.message}`, tostConf);
     } else {
       toast.success(`congratulations!!! password updated `, tostConf);
+      
       navigate("/auth/login");
     }
   };
@@ -57,7 +58,7 @@ const PasswordForm = () => {
       <ToastContainer />
       <div>
         <Typography variant="h4" align="center" gutterBottom>
-          Create Password
+          Create New Password
         </Typography>
         <form onSubmit={handleSubmit}>
           <Grid container spacing={2} justifyContent="center">
